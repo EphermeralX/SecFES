@@ -1,7 +1,7 @@
 /**
  * SecFES - Secure File Encryption Software
- * @author Sean (Haoxiang) Cheng
  * @date 2023-5-9
+ * @update 2026-10-31
  *
  * Original undergraduate version (2023). See README.md for a security review
  * of known weaknesses in this design.
