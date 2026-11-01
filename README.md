@@ -98,6 +98,3 @@ The program *worked*: files went in, ciphertext came out, decryption round-tripp
 
 ## Tech stack
 C (C99) · POSIX threads · OpenSSL libcrypto (EVP API) · Linux/macOS
-
-## Author
-Sean (Haoxiang) Cheng — MS in Information Technology – Information Security, Carnegie Mellon University
