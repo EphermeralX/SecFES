@@ -4,6 +4,8 @@ A multithreaded file encryption/decryption tool written in C, using POSIX thread
 
 I wrote SecFES in 2023 as an undergraduate project to learn systems programming: concurrency, synchronization, and calling a real cryptographic library. In 2026 I went back over it as a security engineer and wrote down its design flaws (see [Security Review](#security-review-2026)). Re-reading old code with a security mindset is part of what this repo is meant to show.
 
+*Originally written in 2023; uploaded to GitHub in 2026.*
+
 > ⚠️ **Not for real use.** The security review below lists known cryptographic weaknesses. Treat this as a learning project, not a tool for protecting sensitive data.
 
 ---
@@ -67,7 +69,7 @@ The key must be exactly **256 characters** (or a 256-byte key file). Example:
 
 ```bash
 # generate a 256-character key file (128 random bytes, hex-encoded)
-head -c 128 /dev/urandom | xxd -p | tr -d '\n' > key.txt
+openssl rand -hex 128 | tr -d '\n' > key.txt
 
 echo "hello world" > test.txt
 ./secfes -K key.txt -e test.txt   # encrypts in place
